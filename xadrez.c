@@ -57,5 +57,34 @@ int main() {
 
     printf("\n");
 
+        // ========================
+    // MOVIMENTO DO CAVALO
+    // ========================
+    // O Cavalo se move em "L": duas casas para baixo e uma casa para a esquerda.
+    // Este movimento será implementado usando loops aninhados (FOR + WHILE).
+    
+    printf("Movimento do Cavalo (FOR + WHILE):\n");
+
+    int movimentosBaixo = 2;    // Quantidade de casas para baixo
+    int movimentosEsquerda = 1; // Quantidade de casas para a esquerda
+
+    // Loop FOR para movimento para baixo (2 casas)
+    for (int k = 1; k <= movimentosBaixo; k++) {
+        printf("Baixo (%d)\n", k);
+
+        // Dentro do FOR, vamos usar um WHILE para o movimento à esquerda
+        // Só executará após os 2 movimentos para baixo serem completados
+        if (k == movimentosBaixo) {
+            int l = 1;
+            while (l <= movimentosEsquerda) {
+                printf("Esquerda (%d)\n", l);
+                l++;
+            }
+        }
+    }
+
+    printf("\n");
+
+
     return 0;
 }
